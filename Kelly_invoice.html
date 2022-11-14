@@ -319,7 +319,7 @@
 												</td>
 											</tr>
 											<!-- Invoice payment info -->
-											<tr class="invoice-payment-info">
+											<!--<tr class="invoice-payment-info">
 												<td class="invoice-payment-info__primary">
 													<div class="paragraph">
 														<div class="paragraph__line">${textLabels.invoicePaymentAccountHolderName} ${order.invoicePayment.accountHolderName}</div>
@@ -335,7 +335,7 @@
 														<div class="paragraph__line">${textLabels.invoicePaymentDescription?replace('{companyName}','${companyOrStoreName}')}</div>
 													</div>
 												</td>
-											</tr>
+											</tr> -->
 										</#if>
 										<tr class='${showInvoicePayment?then("", "billing-info")}'>
 											<!--<#if showBuyerShippingSection>
@@ -399,11 +399,11 @@
 												</div>
 											</td>
 										</tr>
-										<#if order.orderComments?has_content || isExtrafieldsForSection(order, "order_comments")>
+										<!--<#if order.orderComments?has_content || isExtrafieldsForSection(order, "order_comments")>
 											<tr class="order-comments">
-												<td class="order-comments__info" colspan="2">
+												<td class="order-comments__info" colspan="2"> -->
 													<!-- Order comments -->
-													<p class="paragraph">
+													<!-- <p class="paragraph">
                                                         <#if order.orderCommentsTitle?has_content>
 															<span class="paragraph__header">${order.orderCommentsTitle}</span>
                                                         <#else>
@@ -416,7 +416,7 @@
 													</p>
 												</td>
 											</tr>
-										</#if>
+										</#if> -->
 									</tbody>
 								</table>
 							</td>
