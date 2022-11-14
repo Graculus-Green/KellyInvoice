@@ -381,7 +381,7 @@
 											<td class="billing-info__customer" <#if !showBuyerShippingSection>colspan="2"</#if>>
 												<!-- Customer billing address -->
 												<div class="paragraph">
-													<div class="paragraph__header">${textLabels.yourDetails}</div> <!--Changed from buyer-->
+													<div class="paragraph__header">Your details</div> <!--Changed from ${textLabels.buyer}-->
 													<#if showBilling>
 														<#noescape>${order.billingAddress.formattedHtml}</#noescape>
 														<div class="paragraph__line">${order.billingAddress.phone}</div>
