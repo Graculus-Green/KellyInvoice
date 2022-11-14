@@ -338,10 +338,10 @@
 											</tr>
 										</#if>
 										<tr class='${showInvoicePayment?then("", "billing-info")}'>
-											<#if showBuyerShippingSection>
-												<td class="billing-info__shipping">
+											<!--<#if showBuyerShippingSection>
+												<td class="billing-info__shipping"> -->
 													<!-- Customer shipping address -->
-													<#if order.isPickup>
+													<!--<#if order.isPickup>
 														<p class="paragraph">
 															<span class="paragraph__header">${order.shippingMethod}</span>
 															<span class="paragraph__line">${order.pickupTime}</span>
@@ -374,8 +374,8 @@
 															</span>
 														</p>
 													</#if>
-												</td>
-											</#if>
+												</td> 
+											</#if> -->
 											<td class="billing-info__customer" <#if !showBuyerShippingSection>colspan="2"</#if>>
 												<!-- Customer billing address -->
 												<div class="paragraph">
@@ -435,13 +435,13 @@
 											<td class="order-info__cell order-info__cell--qty">
 												<p class="paragraph">${textLabels.quantity}</p>
 											</td>
-											<#if order.items[0].taxes?has_content>
+											<!--<#if order.items[0].taxes?has_content>
 												<#list order.items[0].taxes as tax>
 													<td class="order-info__cell order-info__cell--vat">
 														<p class="paragraph">${tax.name}</p>
 													</td>
 												</#list>
-											</#if>
+											</#if> -->
 											<td class="order-info__cell order-info__cell--subtotal">
 												<p class="paragraph">${textLabels.subtotal}</p>
 											</td>
@@ -469,7 +469,7 @@
 													<p class="paragraph">${orderItem.quantity}</p>
 												</td>
 
-												<#if orderItem.taxes?has_content>
+												<!--<#if orderItem.taxes?has_content>
 													<#list orderItem.taxes as tax>
 														<td class="order-info__cell order-info__cell--vat">
 															<#if tax.percentValue?has_content >
@@ -477,7 +477,7 @@
 															</#if>
 														</td>
 													</#list>
-												</#if>
+												</#if> -->
 
 												<td class="order-info__cell order-info__cell--subtotal">
 													<p class="paragraph">${orderItem.subtotal}</p>
@@ -499,7 +499,7 @@
 												<p class="paragraph">${order.shipping.cost}</p>
 											</td>
 											<td class="order-info__cell order-info__cell--qty"></td>
-											<#if order.shipping.taxes?has_content>
+											<!--<#if order.shipping.taxes?has_content>
 												<#list order.shipping.taxes as tax>
 													<td class="order-info__cell order-info__cell--vat">
 														<#if tax.percentValue?has_content >
@@ -507,7 +507,7 @@
 														</#if>
 													</td>
 												</#list>
-											</#if>
+											</#if> -->
 											<td class="order-info__cell order-info__cell--subtotal">
 												<p class="paragraph">${order.shipping.cost}</p>
 											</td>
