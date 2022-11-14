@@ -272,24 +272,24 @@
 											<td class="store-info__primary">
 												<!-- Company information: store name, store URL, tax ID, company name, address and contact information -->
 												<p class="paragraph">
-													<span class="paragraph__header">${store.name}</span>
+												<!--	<span class="paragraph__header">${store.name}</span> -->
 													<span class="paragraph__line"><@urlWithoutProtocol store.storeUrl/></span>
-													<span class="paragraph__line<#if isEmptyVatId> paragraph__line--empty</#if>"><#noescape>${store.businessRegistrationID.name!""} ${store.businessRegistrationID.value!""}</#noescape></span>
+												<!--	<span class="paragraph__line<#if isEmptyVatId> paragraph__line--empty</#if>"><#noescape>${store.businessRegistrationID.name!""} ${store.businessRegistrationID.value!""}</#noescape></span> -->
 												</p>
-												<div class="paragraph">
+												<!--<div class="paragraph">
 													<#noescape>${store.officeAddress.formattedHtml}</#noescape>
 												</div>
 												<p class="paragraph"><#noescape>${textLabels.customCompanyInfo!""}</#noescape></p>
-											</td>
+											</td> -->
 											<td class="store-info__secondary">
 												<!-- Order date -->
-												<p class="paragraph">
+												<!--<p class="paragraph">
 													<span class="paragraph__header"><#noescape>${textLabels.invoiceLabel!""}</#noescape></span>
 													<#if order.number?has_content>
 														<span class="paragraph__line">${textLabels.orderNumber} ${order.number}</span>
 													</#if>
 													<span class="paragraph__line">${textLabels.orderDate} ${order.dateCreated}</span>
-												</p>
+												</p>-->
 												<p class="paragraph">
 													<span class="paragraph__header">${textLabels.customerService}</span>
 													<span class="paragraph__line">${store.officeAddress.phone}</span>
