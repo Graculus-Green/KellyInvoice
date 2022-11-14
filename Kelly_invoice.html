@@ -91,7 +91,8 @@
 		width: auto;
 		max-width: 70mm;
 		max-height: 30mm;
-		margin: 0 0 5mm;
+		/*margin: 0 0 5mm; */
+        margin: auto;
 	}
 
 	body .header__title {
@@ -252,7 +253,7 @@
 							<table class="header">
 								<tbody>
 									<tr>
-										<td class="header__logo">
+										<td class="header__logo" style="text-align:center">
 											<!-- Invoice logo -->
 											<#if store.invoiceLogoUrl?has_content>
 												<img src="${store.invoiceLogoUrl}" alt="${store.name?html}"/>
@@ -269,18 +270,18 @@
 								<table>
 									<tbody>
 										<tr class="store-info">
-											<td class="store-info__primary">
+											<!--<td class="store-info__primary"> -->
 												<!-- Company information: store name, store URL, tax ID, company name, address and contact information -->
-												<p class="paragraph">
-												<!--	<span class="paragraph__header">${store.name}</span> -->
-													<span class="paragraph__line"><@urlWithoutProtocol store.storeUrl/></span>
-												<!--	<span class="paragraph__line<#if isEmptyVatId> paragraph__line--empty</#if>"><#noescape>${store.businessRegistrationID.name!""} ${store.businessRegistrationID.value!""}</#noescape></span> -->
+												<!-- <p class="paragraph">
+												    <span class="paragraph__header">${store.name}</span> 
+													<span class="paragraph__line" style="text-align:center"><@urlWithoutProtocol store.storeUrl/></span>
+													<span class="paragraph__line<#if isEmptyVatId> paragraph__line--empty</#if>"><#noescape>${store.businessRegistrationID.name!""} ${store.businessRegistrationID.value!""}</#noescape></span> 
 												</p>
 												<!--<div class="paragraph">
 													<#noescape>${store.officeAddress.formattedHtml}</#noescape>
 												</div>
-												<p class="paragraph"><#noescape>${textLabels.customCompanyInfo!""}</#noescape></p>
-											</td> -->
+												<p class="paragraph"><#noescape>${textLabels.customCompanyInfo!""}</#noescape></p> -->
+											</td> 
 											<td class="store-info__secondary">
 												<!-- Order date -->
 												<!--<p class="paragraph">
@@ -290,8 +291,9 @@
 													</#if>
 													<span class="paragraph__line">${textLabels.orderDate} ${order.dateCreated}</span>
 												</p>-->
-												<p class="paragraph">
-													<span class="paragraph__header">${textLabels.customerService}</span>
+												<p class="paragraph" style="text-align:center">
+													<!-- <span class="paragraph__header">${textLabels.customerService}</span> -->
+                                                    <span class="paragraph__line"><@urlWithoutProtocol store.storeUrl/></span> <!-- Moved from line 277--> 
 													<span class="paragraph__line">${store.officeAddress.phone}</span>
 													<span class="paragraph__line">${store.companyEmail}</span>
 												</p>
